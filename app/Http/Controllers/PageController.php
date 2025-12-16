@@ -15,7 +15,7 @@ class PageController extends Controller
         if(!session()->has('usr_id')){
             return redirect('/login')->with('error','Please login first.');
         }
-        return view('layouts.themes.main');
+        return view('layouts.pages.dashboards.admin');
     }
 
     // Dashboard pages

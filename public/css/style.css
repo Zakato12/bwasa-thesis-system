@@ -1,0 +1,27 @@
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #212529;
+    color: #fff;
+    transition: margin-left 0.3s;
+    z-index: 1000;
+}
+
+/* Sidebar hidden */
+#wrapper.active #sidebar {
+    margin-left: -250px;
+}
+
+/* Content area */
+#content {
+    margin-left: 250px; /* width of sidebar */
+    transition: margin-left 0.3s;
+}
+
+/* Adjust when sidebar hidden */
+#wrapper.active #content {
+    margin-left: 0;
+}
