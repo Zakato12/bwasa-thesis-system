@@ -7,10 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PageController;
 
 // LOGIN ROUTES
-Route::get('/', function(){
-    $title = "Login";
-    return view('layouts.pages.login') ->with('title', $title) ;
-});
+Route::get('/', [PageController::class,'showLogin']);
 Route::post('/login', [AuthController::class, 'login']);
 
 // DASHBOARD

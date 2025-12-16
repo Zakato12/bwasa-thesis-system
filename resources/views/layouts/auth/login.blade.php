@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BWASA - Login</title>
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    @extends('layouts.partials.head')
 </head>
 <body>
     <div class="login-container">
@@ -12,6 +13,13 @@
             <div class="login-header">
                 <h2>Sign In</h2>
                 <p>Enter your credentials to access your account</p>
+
+                @if (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
+
             </div>
              
             <form class="login-form" id="loginForm" method="post" action="{{ url('/login') }}">
@@ -19,8 +27,7 @@
                 <div class="form-group">
                     <div class="input-wrapper">
                         <input
-                            class="@error('username') is-invalid @enderror" 
-                            type="username" 
+                            class="@error('username') is-invalid @enderror"  
                             id="username" 
                             name="username" 
                             required 
@@ -28,7 +35,7 @@
                             >
                         <label for="username">Username</label>
                     </div>
-                    @error('usernmae')
+                    @error('username')
                         <span class="error-message">{{ $message }}</span>
                     @enderror
                 </div>
