@@ -3,7 +3,7 @@
 
 
 <!-- Sidebar Toggle Script -->
-<script>
+<!-- <script>
 document.addEventListener('DOMContentLoaded', function () {
     const toggleBtn = document.getElementById('sidebarToggle');
     const wrapper = document.getElementById('wrapper');
@@ -13,5 +13,25 @@ document.addEventListener('DOMContentLoaded', function () {
             wrapper.classList.toggle('active');
         });
     }
+}); -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const wrapper = document.getElementById('wrapper');
+    const overlay = document.getElementById('overlay');
+
+    if (toggleBtn && wrapper) {
+        toggleBtn.addEventListener('click', function () {
+            wrapper.classList.toggle('active');
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', function () {
+            wrapper.classList.remove('active');
+        });
+    }
 });
+
+
 </script>

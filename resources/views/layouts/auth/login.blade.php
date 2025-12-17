@@ -8,7 +8,13 @@
     @extends('layouts.partials.head')
 </head>
 <body>
+    
     <div class="login-container">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="login-card">
             <div class="login-header">
                 <h2>Sign In</h2>

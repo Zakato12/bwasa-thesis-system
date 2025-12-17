@@ -3,9 +3,20 @@
         <h4>My System</h4>
     </div>
 
-    <ul class="list-unstyled">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Users</a></li>
-        <li><a href="#">Reports</a></li>
-    </ul>
+    <ul class="list-unstyled components">
+
+    <li class="{{ request()->is('dashboard') ? 'active' : '' }}">
+        <a href="{{ url('/dashboard') }}">Dashboard</a>
+    </li>
+
+    <li class="{{ request()->is('users*') ? 'active' : '' }}">
+        <a href="{{ url('/users') }}">Users</a>
+    </li>
+
+    <li class="{{ request()->is('reports*') ? 'active' : '' }}">
+        <a href="{{ url('/reports') }}">Reports</a>
+    </li>
+
+</ul>
+
 </div>

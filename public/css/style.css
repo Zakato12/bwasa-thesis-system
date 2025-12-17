@@ -25,3 +25,19 @@
 #wrapper.active #content {
     margin-left: 0;
 }
+
+/* Sidebar active link */
+#sidebar ul li.active {
+    background: #343a40; /* darken */
+}
+
+#sidebar ul li.active a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Optional hover */
+#sidebar ul li:hover {
+    background: #495057;
+}
+

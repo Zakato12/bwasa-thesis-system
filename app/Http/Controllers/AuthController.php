@@ -30,4 +30,11 @@ class AuthController extends Controller
             return redirect()->action([PageController::class, 'showLogin'])->with('error','Invalid Login Credentials.');
         }
     }
+
+    public function logout(Request $request){
+        $request->session()->flush();
+        $request->session()->regenerate();
+
+        return redirect()->action([PageController::class,'showLogin'])->with('success', 'Successfuly signed out.');
+    }
 }

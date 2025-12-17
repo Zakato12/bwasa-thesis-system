@@ -10,5 +10,8 @@ use App\Http\Controllers\PageController;
 Route::get('/', [PageController::class,'showLogin']);
 Route::post('/login', [AuthController::class, 'login']);
 
+// LOGOUT
+Route::post('/logout', [AuthController::class,'logout']);
+
 // DASHBOARD
 Route::get('/dashboard', [PageController::class,'main']);

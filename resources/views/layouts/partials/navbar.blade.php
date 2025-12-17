@@ -15,7 +15,7 @@
         <div class="ms-auto d-flex align-items-center">
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-decoration-none text-dark dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="d-none d-sm-inline mx-2 fw-medium">User</span>
+                    <span class="d-none d-sm-inline mx-2 fw-medium">{{ session('usr_name') ?? 'User' }}</span>
                     <i class="bi bi-person-circle" style="font-size: 1.6rem;"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="dropdownUser">
@@ -24,7 +24,7 @@
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
-                        <form action="" method="POST" class="d-inline">
+                        <form action="{{ url('/logout') }}" method="POST" class="d-inline">
                             {{ csrf_field() }}
                             <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</button>
                         </form>

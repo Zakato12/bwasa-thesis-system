@@ -112,8 +112,7 @@ body {
 .password-toggle {
     position: absolute;
     right: 12px;
-    
-    
+    top: 7.5px;
     background: none;
     border: none;
     cursor: pointer;
