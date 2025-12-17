@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+document.getElementById('sidebarToggle').addEventListener('click', function () {
+    document.querySelector('.sidebar').classList.toggle('open');
+    document.querySelector('.content').classList.toggle('shift');
+});
+
 
 
 </script>

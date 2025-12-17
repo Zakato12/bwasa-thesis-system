@@ -7,25 +7,25 @@
     <body>
         <div id="wrapper">
 
-    {{-- Sidebar --}}
-    @include('layouts.partials.sidebar')
+            {{-- Sidebar --}}
+            @include('layouts.partials.sidebar')
 
-    {{-- Page Content --}}
-    <div id="content">
+            {{-- Page Content --}}
+            <div id="content">
 
-        {{-- Navbar --}}
-        @include('layouts.partials.navbar')
+                {{-- Navbar --}}
+                @include('layouts.partials.navbar')
 
-        {{-- Main Content --}}
-        <main class="container-fluid mt-4">
-            @yield('content')
-        </main>
+                {{-- Main Content --}}
+                <main class="container-fluid mt-4">
+                    @yield('content')
+                </main>
 
-        {{-- Footer --}}
-        @include('layouts.partials.footer')
+                {{-- Footer --}}
+                @include('layouts.partials.footer')
 
-    </div>
-</div>
+            </div>
+        </div>
 
     </body>
     @include('layouts.partials.scripts')
