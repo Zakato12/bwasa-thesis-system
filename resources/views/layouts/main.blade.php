@@ -6,6 +6,8 @@
     </head>
     <body>
         <div id="wrapper">
+            <!-- Modal -->
+             @include('layouts.partials.modals')
 
             {{-- Sidebar --}}
             @include('layouts.partials.sidebar')

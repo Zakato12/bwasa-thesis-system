@@ -1,8 +1,8 @@
 /* Sidebar */
 #sidebar {
     position: fixed;
-    left: -250px;
-    width: 250px;
+    left: -15%;
+    width: 15%;
     height: 100vh;
     background: #212529;
     color: #fff;
@@ -10,9 +10,9 @@
     z-index: 1000;
 }
 
-/* Sidebar hidden */
+/* Sidebar appear */
 #wrapper.active #sidebar {
-    margin-left: 250px;
+    margin-left: 15%;
 }
 
 /* Content area */
@@ -20,11 +20,10 @@
     transition: margin-left 0.3s;
 }
 
-/* Adjust when sidebar hidden */
-#wrapper.active #content {
-    margin-left: 250px;
-    
-}
+    /* Adjust when sidebar hidden */
+    #wrapper.active #content {
+        margin-left: 15%;
+    }
 
 /* Sidebar active link */
 #sidebar ul li.active {

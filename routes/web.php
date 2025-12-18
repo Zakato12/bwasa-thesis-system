@@ -15,3 +15,6 @@ Route::post('/logout', [AuthController::class,'logout']);
 
 // DASHBOARD
 Route::get('/dashboard', [PageController::class,'main']);
+Route::post('/dashboard', [AuthController::class,'changePass']);
+
+Route::post('/change-password', [AuthController::class, 'changePass']);

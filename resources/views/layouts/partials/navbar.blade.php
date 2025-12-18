@@ -20,7 +20,12 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="dropdownUser">
                     <li>
-                        <a class="dropdown-item" type="button" id="openchangepassModal"><i class="bi bi-key-fill me-2"></i>Change Password</a>
+                        
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                            Change Password
+                        </button>
+
+                        <!-- <a class="dropdown-item" type="button" id="openchangepassModal" data-bs-target="#changePasswordModal"><i class="bi bi-key-fill me-2"></i>Change Password</a> -->
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
